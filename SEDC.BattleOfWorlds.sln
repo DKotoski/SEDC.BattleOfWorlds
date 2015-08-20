@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEDC.BattleOfWorlds.Domain", "SEDC.BattleOfWorlds.Domain\SEDC.BattleOfWorlds.Domain.csproj", "{C5863949-0562-467D-B628-1344A2649DC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEDC.BattleOfWorlds.Infrastructure.DataAccess", "SEDC.BattleOfWorlds.Infrastructure.DataAccess\SEDC.BattleOfWorlds.Infrastructure.DataAccess.csproj", "{9FD9BC0F-1B65-44FE-9B33-8C7E86014438}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEDC.BattleOfWorlds.Infrastructure.WebUI", "SEDC.BattleOfWorlds.Infrastructure.WebUI\SEDC.BattleOfWorlds.Infrastructure.WebUI.csproj", "{69F0A0C6-606E-4E5B-B838-AA33C7669E5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEDC.BattleOfWorlds.Infrastructure.AppServices", "SEDC.BattleOfWorlds.Infrastructure.AppServices\SEDC.BattleOfWorlds.Infrastructure.AppServices.csproj", "{965F8C2B-78E8-40C3-B033-CACE938E5C79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5863949-0562-467D-B628-1344A2649DC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5863949-0562-467D-B628-1344A2649DC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5863949-0562-467D-B628-1344A2649DC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5863949-0562-467D-B628-1344A2649DC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FD9BC0F-1B65-44FE-9B33-8C7E86014438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FD9BC0F-1B65-44FE-9B33-8C7E86014438}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FD9BC0F-1B65-44FE-9B33-8C7E86014438}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FD9BC0F-1B65-44FE-9B33-8C7E86014438}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69F0A0C6-606E-4E5B-B838-AA33C7669E5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69F0A0C6-606E-4E5B-B838-AA33C7669E5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69F0A0C6-606E-4E5B-B838-AA33C7669E5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69F0A0C6-606E-4E5B-B838-AA33C7669E5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{965F8C2B-78E8-40C3-B033-CACE938E5C79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{965F8C2B-78E8-40C3-B033-CACE938E5C79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{965F8C2B-78E8-40C3-B033-CACE938E5C79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{965F8C2B-78E8-40C3-B033-CACE938E5C79}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

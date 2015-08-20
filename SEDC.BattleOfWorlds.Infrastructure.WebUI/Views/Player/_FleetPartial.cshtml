@@ -1,0 +1,14 @@
+﻿@model SEDC.BattleOfWorlds.Domain.Base
+
+<div>
+    <h4>Base</h4>
+    <hr />
+   @{   
+       var buildings = new SEDC.BattleOfWorlds.Infrastructure.DataAccess.BuildingsRepository().GetAll();
+       foreach (var building in buildings)
+       {
+           @Html.Partial("_BuildingPartial", building)
+       }
+    }
+</div>
+
