@@ -9,6 +9,7 @@ namespace SEDC.BattleOfWorlds.Domain.Interfaces
 {
     public interface IBaseRepository<T>
     {
+        ICollection<T> GetAll();
         void Add(T entity);
         T Get(int id);
         void Delete(int id);

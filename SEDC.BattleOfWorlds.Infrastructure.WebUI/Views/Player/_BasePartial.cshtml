@@ -3,20 +3,23 @@
 <div>
     <h4>Base</h4>
     <hr />
-   @{   
-       var buildings = new SEDC.BattleOfWorlds.Infrastructure.DataAccess.BuildingsRepository().GetAll();
-       foreach (var building in buildings)
-       {
-           @Html.Partial("_BuildingPartial", building)
-       }
+    @{
+        var buildings = new SEDC.BattleOfWorlds.Infrastructure.DataAccess.BuildingsRepository().GetAll();
+        foreach (var building in buildings)
+        {
+            @Html.Partial("_BuildingPartial", building)
+        }
+        var fleets = new SEDC.BattleOfWorlds.Infrastructure.DataAccess.FleetRepository().GetAll();
+        var baseFleet = fleets.SingleOrDefault(x => x.Location == SEDC.BattleOfWorlds.Domain.Location.Base);
     }
+    @Html.Partial("_FleetPartial", baseFleet)
 </div>
 @section scripts{
-    <script >
+    <script>
         $(".buyNew").on("click", function () {
-            var id = this.parent().attr("entityID");
-            console.log(id);
-            console.log("niguh!");
+            var id = $(this).parent().attr("entityID");
+            var type = $(this).parent().attr("entityType");
+            $.post("/Player/Build", { entityID: id, entityType: type });
             //send json answer to server to build the thing
         });
     </script>

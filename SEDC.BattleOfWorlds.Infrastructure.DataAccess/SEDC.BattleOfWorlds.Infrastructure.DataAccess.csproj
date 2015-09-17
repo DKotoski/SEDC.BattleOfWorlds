@@ -54,6 +54,7 @@
     <Compile Include="BattleDbContext.cs" />
     <Compile Include="BuildingsRepository.cs" />
     <Compile Include="FleetFactory.cs" />
+    <Compile Include="FleetRepository.cs" />
     <Compile Include="Migrations\201508091400413_InitialCreate.cs" />
     <Compile Include="Migrations\201508091400413_InitialCreate.Designer.cs">
       <DependentUpon>201508091400413_InitialCreate.cs</DependentUpon>

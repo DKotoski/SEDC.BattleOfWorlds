@@ -41,5 +41,10 @@ namespace SEDC.BattleOfWorlds.Infrastructure.DataAccess
                 .FirstOrDefault(x => x.Username == currUser).Player;
             return res;
         }
+
+        public ICollection<Player> GetAll()
+        {
+            return db.Players.ToList();
+        }
     }
 }

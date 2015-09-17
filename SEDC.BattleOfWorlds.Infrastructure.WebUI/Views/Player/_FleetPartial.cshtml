@@ -1,13 +1,12 @@
-﻿@model SEDC.BattleOfWorlds.Domain.Base
+﻿@model SEDC.BattleOfWorlds.Domain.Fleet
 
 <div>
-    <h4>Base</h4>
+    <h4>Shipyard</h4>
     <hr />
    @{   
-       var buildings = new SEDC.BattleOfWorlds.Infrastructure.DataAccess.BuildingsRepository().GetAll();
-       foreach (var building in buildings)
+       foreach (var ship in baseFleet.Ships)
        {
-           @Html.Partial("_BuildingPartial", building)
+           @Html.Partial("_ShipPartial", ship)
        }
     }
 </div>

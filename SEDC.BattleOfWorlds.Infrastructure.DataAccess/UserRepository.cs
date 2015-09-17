@@ -47,5 +47,10 @@ namespace SEDC.BattleOfWorlds.Infrastructure.DataAccess
         {
             return db.Users.Any(x => x.Username == username && x.Password == password);
         }
+
+        public ICollection<User> GetAll()
+        {
+            return db.Users.ToList();
+        }
     }
 }

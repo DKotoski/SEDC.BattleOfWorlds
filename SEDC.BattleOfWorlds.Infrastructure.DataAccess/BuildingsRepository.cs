@@ -19,17 +19,16 @@ namespace SEDC.BattleOfWorlds.Infrastructure.DataAccess
 
         public void Delete(Building entity)
         {
-            throw new NotImplementedException();
+            db.Buildings.Remove(entity);
         }
-
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            db.Buildings.Remove(Get(id));
         }
 
         public Building Get(int id)
         {
-            throw new NotImplementedException();
+            return db.Buildings.Find(id);
         }
 
         public List<Building> GetBuildingsInBase(int baseID)
@@ -45,9 +44,10 @@ namespace SEDC.BattleOfWorlds.Infrastructure.DataAccess
             return buildings;
         }
 
-        public List<Building> GetAll()
+        public ICollection<Building> GetAll()
         {
             return db.Buildings.ToList();
         }
+
     }
 }

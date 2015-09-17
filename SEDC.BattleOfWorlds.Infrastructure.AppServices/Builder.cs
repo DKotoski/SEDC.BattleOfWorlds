@@ -15,5 +15,18 @@ namespace SEDC.BattleOfWorlds.Infrastructure.AppServices
         {
             db.BuildingData.Single(x=>x.ID==BuildingDataID).Quantity+=1;
         }
+        public static void Ship(int ShipID)
+        {
+            ThePlayer Me = new ThePlayer();
+            Me.Fleets
+                .SingleOrDefault(x => x.Location == Location.Base)
+                .Ships
+                .SingleOrDefault(x=>x.EntityID==ShipID)
+                .Quantity++;
+        }
+        public static void Building(int BuildingDataID)
+        {
+            db.BuildingData.Single(x => x.ID == BuildingDataID).Quantity += 1;
+        }
     }
 }
