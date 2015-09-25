@@ -1,5 +1,7 @@
-﻿using SEDC.BattleOfWorlds.Domain;
+﻿using N2.Web.Mvc;
+using SEDC.BattleOfWorlds.Domain;
 using SEDC.BattleOfWorlds.Infrastructure.DataAccess;
+using SEDC.BattleOfWorlds.Infrastructure.WebUI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,16 +11,16 @@ using System.Web.Security;
 
 namespace SEDC.BattleOfWorlds.Infrastructure.WebUI.Controllers
 {
-    public class HomeController : Controller
+    public class StartPageController : ContentController<StartPage>
     {
         UserRepository users = new UserRepository();
 
-        public ActionResult Index()
+        public override ActionResult Index()
         {
-            if (User.Identity.IsAuthenticated)
-            {
-                return RedirectToAction("Index", "Player");
-            }
+            //if (User.Identity.IsAuthenticated)
+            //{
+            //    return RedirectToAction("Index", "Player");
+            //}
             return View();
         }
 
@@ -30,11 +32,11 @@ namespace SEDC.BattleOfWorlds.Infrastructure.WebUI.Controllers
         [HttpPost]
         public ActionResult LogIn(string username, string password)
         {
-            
+
             if (users.Authenticate(username, password))
             {
                 FormsAuthentication.SetAuthCookie(username, true);
-                return RedirectToAction("Index","Player");
+                return RedirectToAction("Index", "Player");
             }
             return View();
         }
@@ -59,6 +61,11 @@ namespace SEDC.BattleOfWorlds.Infrastructure.WebUI.Controllers
                 LogIn(user.Username, user.Password);
             }
             return RedirectToAction("Index");
+        }
+
+        internal ActionResult NotFound()
+        {
+            throw new NotImplementedException();
         }
     }
 }

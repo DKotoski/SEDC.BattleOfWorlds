@@ -1,0 +1,14 @@
+﻿@using N2.Web.Mvc.Html
+@using SEDC.BattleOfWorlds.Infrastructure.WebUI.Extensions.Containers
+
+
+
+
+<div class="row">
+    <div class="col-md-9">
+        @{Html.DroppableZone("MainContent").Render();}
+    </div>
+    <div class="col-md-3">
+        @{ Html.DroppableZone("Aside").Render();}
+    </div>
+</div>

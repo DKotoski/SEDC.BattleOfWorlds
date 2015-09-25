@@ -24,9 +24,5 @@ namespace SEDC.BattleOfWorlds.Infrastructure.AppServices
                 .SingleOrDefault(x=>x.EntityID==ShipID)
                 .Quantity++;
         }
-        public static void Building(int BuildingDataID)
-        {
-            db.BuildingData.Single(x => x.ID == BuildingDataID).Quantity += 1;
-        }
     }
 }
